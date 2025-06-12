@@ -1,9 +1,7 @@
 from typing import List
-
 from praktikum.bun import Bun
 from praktikum.ingredient import Ingredient
 from praktikum.ingredient_types import INGREDIENT_TYPE_SAUCE, INGREDIENT_TYPE_FILLING
-
 
 class Database:
     """
@@ -26,8 +24,10 @@ class Database:
         self.ingredients.append(Ingredient(INGREDIENT_TYPE_FILLING, "dinosaur", 200))
         self.ingredients.append(Ingredient(INGREDIENT_TYPE_FILLING, "sausage", 300))
 
+    # Список доступных бургеров
     def available_buns(self) -> List[Bun]:
         return self.buns
 
+    # Список доступных ингредиентов
     def available_ingredients(self) -> List[Ingredient]:
         return self.ingredients
