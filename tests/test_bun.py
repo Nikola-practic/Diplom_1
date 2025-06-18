@@ -13,6 +13,7 @@ class TestBun:
         bun = Bun(name, price)
         assert bun.get_name() == name
 
+
     # Тест проверяет, что булочке можно назначить цену
     @pytest.mark.parametrize("name, price", [
         ("black bun", 100),

@@ -31,6 +31,7 @@ class TestIngredient:
         ingredient = Ingredient(ingredient_type, name, price)
         assert ingredient.get_name() == name
 
+
     # Тест проверяет тип ингредиента "SAUCE"
     @pytest.mark.parametrize("ingredient_type, name, price", [
         (INGREDIENT_TYPE_SAUCE, "hot sauce", 100),
@@ -40,6 +41,7 @@ class TestIngredient:
     def test_ingredient_get_type_sauce(self, ingredient_type, name, price):
         ingredient = Ingredient(ingredient_type, name, price)
         assert ingredient.get_type() == INGREDIENT_TYPE_SAUCE
+
 
     # Тест проверяет тип ингредиента "FILLING"
     @pytest.mark.parametrize("ingredient_type, name, price", [
